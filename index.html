@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Desafio Trainee 2018">
+	<meta name="author" content="GTi Engenharia Jr.">
+	  
+	<title>GTi Engenharia Jr.</title>
+	 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/toastr.css">
+	<!--MEU CSS-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+
+	<!-- BIBLIOTECA JQUERY -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- BIBLIOTECA JQUERY UI -->
+    <script src="js/jquery-ui.js"></script>
+    <!-- BIBLIOTECA TOASTR (notificacao personalizada) -->
+    <script src="js/toastr.min.js"></script>
+	<!--MEU JS-->
+	<script src="js/script.js" rel="stylesheet"></script>
+
+	<link rel="icon" href="img/ico.png">
+
+	<!--FONTS-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+     
+</head>
+<body class="block">
+	<div class="block" id="interface">
+	
+
+
+	<div id="alerta" hidden="">
+        <div class="title">Receba Nossas Novidades <a href="#" id="xis">X</a></div>
+        <div class="body">
+	    	<form id="novidadesform" name="contact-form" method="POST" >
+	    		<label>e-mail:</label>
+				<input type="text" name="email" placeholder="digite seu email">
+				<button type="submit">Enviar</button>
+			</form>
+            <div class="resultado"></div>
+		</div>
+	</div>
+	<div id="contador"></div>
+	
+
+		
+
+		<header class="block col-sm-12" id="header">
+
+			<div class="block row" visible="" id="header-top">
+				<div class="col-md-3 col-sm-4 col-xl-2 block" id="logo">
+					<img src="img/logo.png">
+				</div>
+
+				<nav class="block col-md-9 col-sm-8 col-xl-10" id="menu">
+					<ul class="block" id="listaMenu">
+						<li><a href="#" class="linkMenu">Início</a></li>
+						<li><a href="#" class="linkMenu">Categorias</a></li>
+						<li><a href="#" class="linkMenu">Blog</a></li>
+						<li><a href="#" class="linkMenu">Membros</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			
+			<div class="block row" id="header-center">
+				<div class="col-sm-12" id="title">
+					<h1><img src="img/icone-header.png" alt="logo-white"/> APRENDA A <br> DESENVOLVER COM A GTi JR.</h1>
+					<a href="#front" class="scrollSuave">HTML5 + CSS3 + JS</a>
+					<a href="#back" class="scrollSuave">Ruby On Rails</a>
+				</div>
+				
+			</div>
+		</header>
+
+
+		<main class="block col-sm-12" id="main">
+
+			<section class="block col-sm-12" id="material">
+				
+					<figure class="block col-lg-4 col-md-12">
+						<center>
+							<img src="img/pcs.png">
+						</center>
+					</figure>
+					<div class="block col-lg-8 col-md-12" id="textoMaterial">
+						<h2>MATERIAL TRAINEE 2018</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>			
+			
+			</section>
+
+			<hr>
+
+			<section class="block col-sm-12" id="front">
+
+				<div class="block col-sm-12" id="titleFront">
+					<h2>HTML5 | CSS3 | JS</h2>
+				</div>
+					
+				<div class="block art col-sm-12" id="artFront">
+
+					<figure class="block col-xl-3 col-sm-6" content="html">
+						<center>
+							<img src="img/html.png">
+							<figcaption>
+								<p>HTML 5 - Inrodução <br> Postado por TioSan</p>
+							</figcaption>
+							<div class="block legenda">
+								<h3>Postado dia 05/04/2018</h3>
+								<a href="#">ESTUDAR AGORA</a>
+							</div>
+						</center>
+					</figure>
+
+					<figure class="block col-xl-3 col-sm-6" content="html">
+						<center>
+							<img src="img/html.png">
+							<figcaption>
+								<p>HTML - Livros <br> Postado por TioSan</p>
+							</figcaption>
+							<div class="block legenda">
+								<h3>Postado dia 05/04/2018</h3>
+								<a href="#">ESTUDAR AGORA</a>
+							</div>
+						</center>
+					</figure>
+
+					<figure class="block col-xl-3 col-sm-6" content="html_css">
+						<center>
+							<img src="img/html-css.png">
+							<figcaption>
+									<p>HTML 5 + CSS3 <br> Postado por TioSan</p>
+							</figcaption>
+							<div class="block legenda">
+								<h3>Postado dia 05/04/2018</h3>
+								<a href="#">ESTUDAR AGORA</a>
+							</div>
+						</center>
+					</figure>
+
+					<figure class="block col-xl-3 col-sm-6" content="js">
+						<center>
+							<img src="img/js.png">
+							<figcaption>
+								<p>JavaScript - Introdução <br> Postado por TioSan</p>
+							</figcaption>
+							<div class="block legenda">
+								<h3>Postado dia 05/04/2018</h3>
+								<a href="#">ESTUDAR AGORA</a>
+							</div>
+						</center>
+					</figure>
+
+				</div>
+				<center>
+					<button type="submit" class="butao">VER +</button>
+				</center>
+				
+			</section>
+
+			<hr>
+
+			<section class="block col-sm-12" id="back">
+				<div class="block col-sm-12" id="titleBack">
+					<h2>Ruby On Rails</h2>
+				</div>
+					
+					<div class="block art col-sm-12" id="artBack">
+
+						<figure class="block col-xl-3 col-sm-6" content="ruby">
+							<center>
+								<img src="img/ruby.png">
+								<figcaption>
+									<p>RUBY - Introdução <br> Postado por TioSan</p>
+								</figcaption>
+								<div class="block legenda">
+									<h3>Postado dia 05/04/2018</h3>
+									<a href="#">ESTUDAR AGORA</a>
+								</div>
+							</center>
+						</figure>
+
+						<figure class="block col-xl-3 col-sm-6" content="rails">
+							<center>
+								<img src="img/rails.png">
+								<figcaption>
+									<p>RAILS - Introdução <br> Postado por TioSan</p>
+								</figcaption>
+								<div class="block legenda">
+									<h3>Postado dia 05/04/2018</h3>
+									<a href="#">ESTUDAR AGORA</a>
+								</div>
+							</center>
+						</figure>
+
+						<figure class="block col-xl-3 col-sm-6" content="heroku">
+							<center>
+								<img src="img/heroku.png">
+								<figcaption>
+									<p>HEROKU - Fazendo deploy <br> Postado por TioSan</p>
+								</figcaption>
+								<div class="block legenda">
+									<h3>Postado dia 05/04/2018</h3>
+									<a href="#">ESTUDAR AGORA</a>
+								</div>
+							</center>
+						</figure>
+
+						<figure class="block col-xl-3 col-sm-6" content="rails">
+							<center>
+								<img src="img/rails.png">
+								<figcaption>
+									<p>RAILS - GEMS importantes <br> Postado por TioSan</p>
+								</figcaption>
+								<div class="block legenda">
+									<h3>Postado dia 05/04/2018</h3>
+									<a href="#">ESTUDAR AGORA</a>
+								</div>
+							</center>
+						</figure>
+
+					</div>
+					<center>
+						<button type="submit" class="butao">VER +</button>
+					</center>
+				
+			</section>	
+
+		</main>	
+
+		<footer class="block col-sm-12" id="footer">
+			<center>
+				<div class="block col-sm-12" id="direitos">
+					<p>&copy; Copyright JigokuS</p>
+				</div>
+				<div class="block social">
+					<ul class="block">
+						<li><a href="http://facebook.com"></a></li>
+						<li><a href="http://github.com"></a></li>
+						<li><a href="http://plus.google.com"></a></li>
+						<li><a href="http://twitter.com"></a></li>
+					</ul>
+				</div>
+				<a href="www.gti.ufc.br">GTi Engenharia Jr.</a>
+			</center>
+			<!-- será implementado em breve
+			<a href='#' class="borda" id="backTop"></a>	
+			-->
+		</footer>
+	</div>
+</body>
+</html>
