@@ -15,8 +15,11 @@ $(document).ready(function() {
     function alertaPage() {
         toggleAlert(); 
         $('#alerta').removeAttr('hidden');
+        $('#sombra').removeAttr('hidden');
         clearTimeout(time);    
     }
+
+
 
     //LIMPAR INPUT ANTES DE ATUALIZAR 
     $("input[name='email']").val("");
@@ -36,7 +39,7 @@ $(document).ready(function() {
                 url: "http://51.254.204.44/ti/enviar_email.php",
                 type: "POST",
                 dataType: "JSON",
-                data: { 'meuemail': 'lsousanhk@gmail.com' } // -- passando o paramentro "meuemail" e o dataType JSON
+                data: { 'meuemail': mail } // -- passando o paramentro "meuemail" e o dataType JSON
                 
 
             }).done(function(resposta) { //SE OCORRER TUDO CERTO COM A REQUISIÇAO:
@@ -48,13 +51,15 @@ $(document).ready(function() {
                 $("novidadesform [name='email']").val("");
                 //fechar a alerta depois de 2 segundos
                 setTimeout(alertaPage, 2000);
+                $('#sombra').attr('hidden', '');
 
             }).fail(function(jqXHR, textStatus) { //SE NÃO OCORRER TUDO CERTO COM A REQUISIÇAO: 
                 // 1º a alerta ñ deve fechar.
-
                 // 2º exibir um toastr.error com a mensagem do erro retornada pelo servidor
                 toastr.error(textStatus);
-    
+                $("novidadesform [name='email']").css('box-shadow','inset 0 1px 1px red');
+
+
             }).always(function() {
     
             });
@@ -65,10 +70,30 @@ $(document).ready(function() {
         
     });
 
+    //FUNDO ESCURO
+    $("#sombra").click(function(e) {
+        e.preventDefault();
+        toggleAlert();
+        $('#sombra').attr('hidden','');
+    });
+
+    //BOTAO X DO ALERTA
     $("#xis").click(function(e) {
         e.preventDefault();
         toggleAlert();
+        $('#sombra').attr('hidden','');
     });
+
+
+
+    //ESCONDER NAV
+    var largura = $('html')["0"].clientWidth;
+    largura = Number(largura);
+
+    if(largura <= 767) {
+        $('nav#menu').attr('hidden','');
+    }
+    
 });
 
 /* NÃO MEXER 
@@ -114,7 +139,7 @@ function contador() {
 $(function() {
     $('a.scrollSuave').bind('click',function(event){
         var $anchor = $(this);
-        $('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top -30}, 1500,'easeInOutExpo');
+        $('html, body').stop().animate({scrollTop: $($anchor.attr('href')).offset().top - 100}, 1500,'easeInOutExpo');
     });
 // Outras Animações
 /*
@@ -126,15 +151,22 @@ easeInOutExpo, easeInOutCirc, easeInOutElastic, easeInOutBack, easeInOutBounce
  */
                 
 });
-
+/*
 //ESCONDENDO MENU FIXO
 $(function(){   
     var menu = $('#header-top');   
+    
     $(window).scroll(function () { 
         if ($(this).scrollTop() > 650) { 
             menu.slideUp("fast"); 
         } else {
-            menu.slideDown("fast"); 
+            menu.slideDown("fast");
         }
     });  
 });
+*/
+
+var largura = $('html')["0"].clientWidth;
+largura = Number(largura);
+
+
